@@ -1,0 +1,17 @@
+<!-- settings.html -->
+<div class="settings-panel">
+    <h1>Instellingen</h1>
+    <section>
+        <label>Taal:</label>
+        <select id="lang-select" onchange="changeLanguage()">
+            <option value="nl">Nederlands</option>
+            <option value="en">English</option>
+        </select>
+    </section>
+    <section>
+        <label>Profiel Afbeelding:</label>
+        <input type="file" id="avatar-upload" accept="image/*">
+        <div id="avatar-preview"></div>
+    </section>
+    <button onclick="saveSettings()">Opslaan</button>
+</div>
