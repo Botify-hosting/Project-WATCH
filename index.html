@@ -4,44 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project WATCH | Home</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo">WATCH</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="watchlist.html">Mijn Lijst</a></li>
-            <li><a href="settings.html">Instellingen</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profiel</a>
+            <a href="settings.html">Instellingen</a>
+        </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <h1>De nieuwste blockbusters</h1>
-            <p>Ontdek duizenden films en series in de hoogste kwaliteit.</p>
-            <button class="play-btn">Afspelen</button>
-            <button class="info-btn">Meer informatie</button>
+        <div class="hero-info">
+            <h1>INTERSTELLAR</h1>
+            <p>Een epische reis door tijd en ruimte.</p>
+            <button class="play-btn">▶ Afspelen</button>
         </div>
     </header>
 
-    <main class="container">
+    <main id="content">
         <section class="row">
-            <h2>Trending nu</h2>
-            <div class="film-grid" id="trending-grid">
-                <!-- Wordt gevuld door JavaScript -->
-            </div>
-        </section>
-
-        <section class="row">
-            <h2>Actie & Avontuur</h2>
-            <div class="film-grid" id="action-grid">
-                <!-- Wordt gevuld door JavaScript -->
-            </div>
+            <h2>Trending Nu</h2>
+            <div class="card-container" id="movie-grid"></div>
         </section>
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
