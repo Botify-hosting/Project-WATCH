@@ -1,23 +1,21 @@
-// Onze lokale "database"
-const films = [
-    { id: 1, title: "Film Titel 1", poster: "url_naar_image.jpg" },
-    { id: 2, title: "Film Titel 2", poster: "url_naar_image.jpg" }
+const movies = [
+    { title: "Inception", category: "trending" },
+    { title: "Batman", category: "trending" },
+    { title: "Fast & Furious", category: "action" }
 ];
 
-function renderFilms() {
-    const grid = document.getElementById('film-grid');
-    
-    films.forEach(film => {
+function initHome() {
+    const trendingGrid = document.getElementById('trending-grid');
+    const actionGrid = document.getElementById('action-grid');
+
+    movies.forEach(movie => {
         const card = document.createElement('div');
         card.className = 'film-card';
-        card.innerHTML = `
-            <img src="${film.poster}" alt="${film.title}">
-            <h3>${film.title}</h3>
-        `;
-        card.onclick = () => alert("Start film: " + film.title);
-        grid.appendChild(card);
+        card.innerHTML = `<div class="card-content">${movie.title}</div>`;
+        
+        if (movie.category === 'trending') trendingGrid.appendChild(card);
+        else actionGrid.appendChild(card);
     });
 }
 
-// Initialiseer app
-document.addEventListener('DOMContentLoaded', renderFilms);
+document.addEventListener('DOMContentLoaded', initHome);
