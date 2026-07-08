@@ -2,22 +2,46 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Project WATCH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project WATCH | Home</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <nav><h1>Project WATCH</h1></nav>
 
-    <main id="app">
-        <section id="hero">
-            <h2 id="hero-title">Welkom</h2>
+    <nav class="navbar">
+        <div class="logo">WATCH</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="watchlist.html">Mijn Lijst</a></li>
+            <li><a href="settings.html">Instellingen</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>De nieuwste blockbusters</h1>
+            <p>Ontdek duizenden films en series in de hoogste kwaliteit.</p>
+            <button class="play-btn">Afspelen</button>
+            <button class="info-btn">Meer informatie</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="row">
+            <h2>Trending nu</h2>
+            <div class="film-grid" id="trending-grid">
+                <!-- Wordt gevuld door JavaScript -->
+            </div>
         </section>
 
-        <section id="film-grid" class="grid-container">
-            <!-- Films worden hier via JS ingeladen -->
+        <section class="row">
+            <h2>Actie & Avontuur</h2>
+            <div class="film-grid" id="action-grid">
+                <!-- Wordt gevuld door JavaScript -->
+            </div>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
